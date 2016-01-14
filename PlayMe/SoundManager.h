@@ -15,7 +15,7 @@
 + (SoundManager *)sharedInstance;
 
 - (void)playSound:(NSString *)soundKey;
-- (void)stopSounds;
+- (void)pauseSound;
 - (void)setVolume:(float)volume;
 
 @end

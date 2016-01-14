@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6700DDB61C470A46002967A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6700DDB51C470A46002967A0 /* main.m */; };
 		6700DDB91C470A46002967A0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6700DDB81C470A46002967A0 /* AppDelegate.m */; };
-		6700DDBC1C470A46002967A0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6700DDBB1C470A46002967A0 /* ViewController.m */; };
+		6700DDBC1C470A46002967A0 /* SoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6700DDBB1C470A46002967A0 /* SoundViewController.m */; };
 		6700DDBF1C470A46002967A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6700DDBD1C470A46002967A0 /* Main.storyboard */; };
 		6700DDC11C470A46002967A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6700DDC01C470A46002967A0 /* Assets.xcassets */; };
 		6700DDC41C470A46002967A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6700DDC21C470A46002967A0 /* LaunchScreen.storyboard */; };
@@ -40,8 +40,9 @@
 		6700DE001C471513002967A0 /* sonar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6700DDE61C471513002967A0 /* sonar.mp3 */; };
 		6700DE011C471513002967A0 /* start-echo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6700DDE71C471513002967A0 /* start-echo.mp3 */; };
 		6700DE021C471513002967A0 /* whoosh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6700DDE81C471513002967A0 /* whoosh.mp3 */; };
-		6700DE051C471835002967A0 /* SoundFileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6700DE041C471835002967A0 /* SoundFileController.m */; };
+		6700DE051C471835002967A0 /* SoundFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6700DE041C471835002967A0 /* SoundFileManager.m */; };
 		6700DE071C4719EB002967A0 /* sounds.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6700DE061C4719EB002967A0 /* sounds.plist */; };
+		6700DE0C1C4812C1002967A0 /* SoundCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6700DE0B1C4812C1002967A0 /* SoundCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,8 +50,8 @@
 		6700DDB51C470A46002967A0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6700DDB71C470A46002967A0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6700DDB81C470A46002967A0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6700DDBA1C470A46002967A0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6700DDBB1C470A46002967A0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6700DDBA1C470A46002967A0 /* SoundViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoundViewController.h; sourceTree = "<group>"; };
+		6700DDBB1C470A46002967A0 /* SoundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundViewController.m; sourceTree = "<group>"; };
 		6700DDBE1C470A46002967A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6700DDC01C470A46002967A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6700DDC31C470A46002967A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -83,10 +84,12 @@
 		6700DDE61C471513002967A0 /* sonar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sonar.mp3; sourceTree = "<group>"; };
 		6700DDE71C471513002967A0 /* start-echo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "start-echo.mp3"; sourceTree = "<group>"; };
 		6700DDE81C471513002967A0 /* whoosh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whoosh.mp3; sourceTree = "<group>"; };
-		6700DE031C471835002967A0 /* SoundFileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundFileController.h; sourceTree = "<group>"; };
-		6700DE041C471835002967A0 /* SoundFileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundFileController.m; sourceTree = "<group>"; };
+		6700DE031C471835002967A0 /* SoundFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundFileManager.h; sourceTree = "<group>"; };
+		6700DE041C471835002967A0 /* SoundFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundFileManager.m; sourceTree = "<group>"; };
 		6700DE061C4719EB002967A0 /* sounds.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sounds.plist; sourceTree = "<group>"; };
 		6700DE081C471B24002967A0 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		6700DE0A1C4812C1002967A0 /* SoundCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundCell.h; sourceTree = "<group>"; };
+		6700DE0B1C4812C1002967A0 /* SoundCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,13 +124,10 @@
 			children = (
 				6700DDB71C470A46002967A0 /* AppDelegate.h */,
 				6700DDB81C470A46002967A0 /* AppDelegate.m */,
-				6700DE031C471835002967A0 /* SoundFileController.h */,
-				6700DE041C471835002967A0 /* SoundFileController.m */,
-				6700DDCB1C470B55002967A0 /* SoundManager.h */,
-				6700DDCC1C470B55002967A0 /* SoundManager.m */,
-				6700DDBA1C470A46002967A0 /* ViewController.h */,
-				6700DDBB1C470A46002967A0 /* ViewController.m */,
 				6700DE081C471B24002967A0 /* Constants.h */,
+				6700DE0D1C481447002967A0 /* model */,
+				6700DE091C4812AB002967A0 /* view */,
+				6700DE0F1C481467002967A0 /* controller */,
 				6700DDB41C470A46002967A0 /* Supporting Files */,
 			);
 			path = PlayMe;
@@ -178,6 +178,43 @@
 				6700DDE81C471513002967A0 /* whoosh.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		6700DE091C4812AB002967A0 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				6700DE0A1C4812C1002967A0 /* SoundCell.h */,
+				6700DE0B1C4812C1002967A0 /* SoundCell.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		6700DE0D1C481447002967A0 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				6700DE0E1C48145A002967A0 /* singleton */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		6700DE0E1C48145A002967A0 /* singleton */ = {
+			isa = PBXGroup;
+			children = (
+				6700DE031C471835002967A0 /* SoundFileManager.h */,
+				6700DE041C471835002967A0 /* SoundFileManager.m */,
+				6700DDCB1C470B55002967A0 /* SoundManager.h */,
+				6700DDCC1C470B55002967A0 /* SoundManager.m */,
+			);
+			name = singleton;
+			sourceTree = "<group>";
+		};
+		6700DE0F1C481467002967A0 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				6700DDBA1C470A46002967A0 /* SoundViewController.h */,
+				6700DDBB1C470A46002967A0 /* SoundViewController.m */,
+			);
+			name = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,8 +315,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6700DDBC1C470A46002967A0 /* ViewController.m in Sources */,
-				6700DE051C471835002967A0 /* SoundFileController.m in Sources */,
+				6700DDBC1C470A46002967A0 /* SoundViewController.m in Sources */,
+				6700DE0C1C4812C1002967A0 /* SoundCell.m in Sources */,
+				6700DE051C471835002967A0 /* SoundFileManager.m in Sources */,
 				6700DDCD1C470B55002967A0 /* SoundManager.m in Sources */,
 				6700DDB91C470A46002967A0 /* AppDelegate.m in Sources */,
 				6700DDB61C470A46002967A0 /* main.m in Sources */,

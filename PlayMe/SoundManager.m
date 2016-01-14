@@ -7,8 +7,14 @@
 //
 
 #import "SoundManager.h"
-#import "SoundFileController.h"
+#import "SoundFileManager.h"
 #import <AVFoundation/AVFoundation.h>
+
+@interface SoundManager ()
+
+@property (nonatomic, strong) AVAudioPlayer *player;
+
+@end
 
 @implementation SoundManager
 
@@ -31,7 +37,7 @@
     
     if (self)
     {
-        [self preloadSounds:[SoundFileController sharedInstance].sounds];
+        [self preloadSounds:[SoundFileManager sharedInstance].sounds];
     }
     
     return self;
@@ -66,24 +72,27 @@
 {
     NSAssert(self.audio[soundKey], @"effect not found");
     
-    AVAudioPlayer *player = (AVAudioPlayer *)self.audio[soundKey];
+    [self stopAllSounds];
+   
+    self.player = (AVAudioPlayer *)self.audio[soundKey];
     
-    if(player.isPlaying)
-    {
-        player.currentTime = 0;
-    }
-    else
-    {
-        [player play];
-    }
+    [self.player play];
 }
 
-- (void)stopSounds
+- (void)pauseSound
+{
+    [self.player pause];
+}
+
+- (void)stopAllSounds
 {
     [self.audio enumerateKeysAndObjectsUsingBlock:^(NSString *key, AVAudioPlayer *obj, BOOL *stop)
      {
          if(obj.isPlaying)
+         {
              [obj stop];
+             obj.currentTime = 0;
+         }
      }];
 }
 
