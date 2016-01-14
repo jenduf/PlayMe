@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E27e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tKC-Y0-pcb">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="pause" id="tCf-PB-xYG">
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" id="fkk-3O-XJI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="play" id="W40-9F-sDs">
+                                        <connections>
+                                            <action selector="play:" destination="BYZ-38-t0r" id="TWH-zc-7JG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bRg-HC-DzP">
+                                <rect key="frame" x="20" y="48" width="560" height="508"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SoundCellIdentifier" id="mhO-Ww-mlJ">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mhO-Ww-mlJ" id="sDG-ZB-HfD">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="GPT-4l-Fbq"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="vTZ-bJ-ZhL"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a sound:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uam-1V-LuR">
+                                <rect key="frame" x="20" y="20" width="118" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bRg-HC-DzP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="27B-XU-OlK"/>
+                            <constraint firstItem="tKC-Y0-pcb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CAU-Bk-lwh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tKC-Y0-pcb" secondAttribute="bottom" id="LBM-iI-QXU"/>
+                            <constraint firstAttribute="trailing" secondItem="tKC-Y0-pcb" secondAttribute="trailing" id="Qno-1V-pXh"/>
+                            <constraint firstAttribute="trailing" secondItem="bRg-HC-DzP" secondAttribute="trailing" constant="20" id="Urr-bb-qXY"/>
+                            <constraint firstItem="tKC-Y0-pcb" firstAttribute="top" secondItem="bRg-HC-DzP" secondAttribute="bottom" id="mTm-ec-l1u"/>
+                            <constraint firstItem="Uam-1V-LuR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="npI-QC-JW5"/>
+                            <constraint firstItem="bRg-HC-DzP" firstAttribute="top" secondItem="Uam-1V-LuR" secondAttribute="bottom" constant="8" id="ofq-ct-dsa"/>
+                            <constraint firstItem="Uam-1V-LuR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="rgS-hM-NoN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="soundsTableView" destination="bRg-HC-DzP" id="Tmz-6m-eMV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="387"/>
+        </scene>
+    </scenes>
+</document>

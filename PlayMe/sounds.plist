@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>achievement.wav</string>
+	<string>ahh-nicely.mp3</string>
+	<string>boo.mp3</string>
+	<string>bubble.wav</string>
+	<string>bubble1.wav</string>
+	<string>cake-full.aif</string>
+	<string>chat_incoming.mp3</string>
+	<string>click0.mp3</string>
+	<string>click1.mp3</string>
+	<string>doom.mp3</string>
+	<string>drumroll.mp3</string>
+	<string>elevator-badspeakers.mp3</string>
+	<string>gavel.mp3</string>
+	<string>ho.mp3</string>
+	<string>laser-prep-reverse.mp3</string>
+	<string>laser-prep.mp3</string>
+	<string>ninja-sword.mp3</string>
+	<string>ninja-whack.mp3</string>
+	<string>ninja-whoosh.mp3</string>
+	<string>notice.mp3</string>
+	<string>sad-trombone.aiff</string>
+	<string>select-classic.wav</string>
+	<string>small-applause.mp3</string>
+	<string>sonar.mp3</string>
+	<string>start-echo.mp3</string>
+	<string>whoosh.mp3</string>
+</array>
+</plist>
